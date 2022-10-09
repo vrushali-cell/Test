@@ -1,0 +1,29 @@
+const numbers = [3, 7, 4, 8, 9];
+
+var max = numbers[0];
+
+var secarr = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (max < numbers[i]) {
+    max = numbers[i]
+  }
+}
+
+for (let i = 0; i < numbers.length; i++) {
+  for (let j = numbers.length - 1; j > i; j--) {
+    if (numbers[i] > numbers[j]) {
+      let temp = numbers[i];
+      numbers[i] = numbers[j];
+      numbers[j] = temp;
+    }
+  }
+}
+
+for (i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+console.log("second greater number is:" + numbers[i - 2]);
+
+console.log("largest numbermax);

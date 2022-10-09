@@ -1,0 +1,18 @@
+const numbers=[7,9,3,15,5];
+  
+  var max=0;
+  var secmax=0;
+  
+  for(let i=0; i<numbers.length; i++){
+        if(numbers[i]>max){
+                max=numbers[i];
+            }
+            for(let j=0; j<numbers.length; j++){
+                if(numbers[j]>secmax && numbers[j]<numbers[i]){
+                    secmax=numbers[j];
+                }
+            }
+        }
+
+console.log("max:" + max);
+console.log("second max:" + secmax);
